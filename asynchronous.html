@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dog"></div>
+<script>
+    async function fetchmultipleDogs(count){
+        try{
+            const res = await fetch(`https://dog.ceo/api/breeds/image/random/${count}`);
+            const data = await res.json();
+            data.message.forEach(imgUrl => {
+                document.getElementById("dog").innerHTML +=
+                `<img src="${imgUrl}"alt="Dog" style="max-width: 200px; margin:10px;"/>`;
+
+                 });
+        }
+        catch(err){
+            console.error(err);
+            document.getElementById("dog").innerHTML =`<p>Error loading images</p>`;
+
+        }
+
+    }
+    fetchmultipleDogs(4);
+</script>
+</body>
+</html>

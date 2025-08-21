@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="student"></h2>
+
+    <script>
+        function fetchdata(){
+            return new Promise((resolve,reject)=>{
+                fetch("https://jsonplaceholder.typicode.com/albums")
+                .then(res=>{
+                    return res.json()
+                })
+                .then(data=>{
+                    resolve(data)
+                })
+                .catch(err=>{
+                    reject(err)
+                })
+            })
+        }
+
+        fetchdata()
+        .then(data=>{
+            console.log(data)
+            data.map(ele=>{
+                document.getElementById("student").innerHTML+=`<li>id:${ele.id},title:${ele.title}<li>`
+            })
+        })
+        .catch(err=>{console.log(err)})
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //traversal
+        let arr = [10,20,30,40,50];
+        for (let i =0; i < arr.length; i++){
+            console.log("TRAVERSAL", arr[i]);
+        }
+
+        //sum
+         let arr1 = [5,10,15];
+         let sum = 0;
+         for (let i=0; i< arr1.length;i++){
+            sum = sum+arr1[i];
+            
+         }
+         console.log("sum:",sum);
+
+         //largest
+
+         let arr2 = [4,9,1,7];
+         let max =arr2[0];
+         for (let i=1; i < arr2.length;i++){
+            if (arr2[i]>max)
+            max = arr2[i];
+         }
+
+         console.log("largest",max);
+
+         //smallest
+
+         let arr3 = [20,10,2,4,16];
+         let min =arr3[0];
+         for (let i=1; i< arr3.length;i++){
+            if(arr3[i]<min)
+            min = arr3[i];
+         }
+         console.log("smallest",min);
+
+         //reverse
+
+         let arr4 = [11,2,5,8,10];
+         let reverse =[];
+         for (let i=arr4.length -1;i>=0;i--){
+            reverse.push(arr4[i]);
+         }
+         console.log("reverse",reverse);
+
+         //search
+
+         let arr5 = [1,4,9,7];
+         let search =4
+         console.log(arr5.includes(search));
+
+
+         //even or odd count
+
+         let arr6 = [1,2,3,4,5];
+         let even =0, odd = 0
+         for (let num of arr6){
+            num %2 ===0 ? even++ : odd++;
+          }
+         console.log(`even:${even}, odd:${odd}`);
+
+         //remove duplicates
+
+         let arr7 = [1,3,3,6,6,8,9];
+         let unique = [... new Set(arr7)];
+         console.log(unique)
+
+         // sorting
+         let arr8 =[4,19,1,7];
+         for(let i =0;i< arr8.length; i++){
+            for(let j =0; j< arr8.length -i-1; j++){
+               if (arr8[j] > arr8[j +1]) {
+                 let temp = arr8[j];
+                 arr8[j]= arr8[j +1];
+                 arr8[j+1] = temp;
+                               }
+            }
+         }
+         console.log ("sorted array:"+arr8);
+
+
+
+    </script>
+    
+</body>
+</html>

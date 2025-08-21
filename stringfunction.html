@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let str="hello world"
+    console.log(str.length)
+    console.log(str.toLowerCase())
+    console.log(str.toUpperCase())
+    console.log("dghg",str.charAt(2))
+    console.log(str.indexOf("w"))
+
+    let strr="welcome to javascript"
+    console.log(strr.lastIndexOf(" javascript"))
+    console.log(strr.substring(0,7))
+    console.log(strr.slice(0,5))
+    console.log(strr.slice(-14))
+
+    let strrr="     welcome to programming"
+    console.log("Trim:"+strrr.trim())
+    console.log(strrr.replace("programming","web programming"))
+    console.log("Repeat: "+strrr.repeat(3))
+
+    let strii="     welcome to the      prograamming world"
+    let v =strii.split("")
+        console.log(v.join("/"))
+        console.log("includes:-"+strii.includes("to"))
+        console.log("startswith:="+strii.startsWith("welcome"))
+        console.log("endswith:-"+strii.endsWith("j"))
+        str1="hello"
+
+        str2="world"
+        //console.log(str.concat("",str2,"!"))
+        console.log("concatination:"+str1.charAt(0).toUpperCase()+str1.slice(1)+" "+str2+"!")
+
+        console.log("concatinate:"+str1.concat(" ",str2))
+
+        console.log("After trimming:"+strii.trim())
+        str4=",thanks  ,for,visiting"
+        console.log(str4.replaceAll(',','/'))
+    
+    </script>
+</body>
+</html>

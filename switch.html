@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     Number 1= <input type="number" id="num1"><br><br>
+     number 2=<input type="number" id="num2"><br><br>
+     <button onclick="operation('+')">Add</button><br>
+      <button onclick="operation('-')">sub</button><br>
+       <button onclick="operation('*')"> mul</button><br>
+       <p id="res"></p>
+
+       <script>
+         
+         
+            function operation(operator){
+    let a=parseInt(document.getElementById("num1").value);
+        let b=parseInt(document.getElementById("num2").value); 
+        let res; 
+        
+        
+        switch(operator){
+            case '+':
+               res= a+b;
+                break;
+
+                case '-':
+                   res= a-b;
+                    break;
+
+                    case '*':
+                     res=  a*b;
+                        break;
+            default:
+                document.write("Invalid");
+
+        }
+        document.getElementById("res").innerHTML=`${a} ${operator} ${b} ${res}`;   
+
+
+
+            }
+            </script>
+</body>
+</html>

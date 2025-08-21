@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Enter a Name:</h2>
+    <input type="text" id="nameInput" placeholder="Enter your name"/>
+    <button onclick="printNamePattern()"> print pattern</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        function printNamePattern(){
+            const name = document.getElementById("nameInput").value;
+            let temp = "";
+            let result= "";
+
+            for(let i=0; i < name.length; i++){
+                temp += name[i];
+                result += temp + "\n";
+
+            }
+            document.getElementById("output").textContent = result;
+        }
+    </script>
+
+
+</body>
+</html>

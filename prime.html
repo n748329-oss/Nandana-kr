@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      enter the number:<input type="text" id="num">
+    <button onclick="prime()"> find</button>
+    <h1 id="r"></h1> 
+    <script>
+        function prime(){
+            let n =parseInt(document.getElementById("num").value);
+            flag =0;
+            for (let i=2 ; i<n;i++){
+                if(flag===1){
+                flag=1;
+
+                break;
+                }
+
+
+            }
+            if(flag===1){
+                document.getElementById("r").innerHTML=`${n} is not prime`;
+            }
+            else{
+                document.getElementById("r").innerHTML=`${n} is prime`;
+
+            }
+        }
+
+    </script>
+  
+</body>
+</html>

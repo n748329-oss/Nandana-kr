@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ll">
+        <h1> word and sentence count</h1>
+        <label for="">Enter the paragraph</label>
+        <textarea name="" id="txt"></textarea><br><br>
+        <button class="btn" onclick="cntf()">search</button>
+         <h3 id="res"></h3>
+    </div>
+    
+    <script>
+        function cntf(){
+            let data=document.getElementById("txt").value
+            let l=data.length
+            console.log("length",l);
+            document.getElementById("length",l);
+
+            let mr=data.split(" ")
+            console.log("dfgh",mr)
+            let rest=""
+
+
+            let t=data.split("")
+            console.log("gg",t)
+
+            count=0
+             for(let i=0;i<l;i++)
+             {
+                if(t[i]=="."){
+                    count=count+1
+
+                }
+
+             }
+             rest=rest.concat("total number of words:"+mr.length+"<br>")
+             rest=rest.concat("total number of sentence:"+count)
+             document.getElementById("res").innerHTML=rest
+        }
+    </script>
+</body>
+</html>

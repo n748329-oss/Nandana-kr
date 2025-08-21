@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter the value" id="num">
+    <button onclick="showlist()"> showlist</button>
+    <h1 id="r"></h1> 
+    
+
+    <script>
+        function showlist(){
+            const input=document.getElementById("num").value;
+            const arr=input.split(",")
+            let listitems=""
+            for(let i=0;i<arr.length;i++){
+                listitems=listitems +`${arr[i]}`+"<br>"
+
+            }
+            document.getElementById("r").innerHTML=listitems
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>next previous program</h1>
+    <script>
+        let fruitdata = [{
+            id :1,
+            fruit: "apple",
+            color:"red",
+            size:'large'
+        },
+        {
+            id:2,
+            fruit: "orange",
+            color:"'orange",
+            size:'small',
+
+        
+        },
+        {
+            id:3,
+            fruit:"kiwi",
+            color:'green',
+            size:'large'
+        }
+
+
+    ]
+    let counter =0
+    function showdata(){
+        let resultELement = document.getElementById("res")
+        let fdft = fruitdata[counter]
+        resultELement.innerHTML = `fruit:${fdft.fruit} size:${fdft.color} <br><br>`
+
+    }
+    //showdata
+    function next(){
+        counter = counter < fruitdata.length -1? counter+1 :0
+        showdata()
+
+    }
+    function prev(){
+        counter = counter > 0 ? counter -1 : fruitdata.length -1;
+         showdata()
+
+    }
+    </script>
+    <table>
+        <tr>
+            <td colspan="2">
+                <h2>view fruit details</h2>
+            </td>
+        </tr>
+        <tr>
+            <td><input type=" button" value="Next" onclick="next()"></td>
+            <td><input type=" button" value="Previous" onclick="prev()"></td>
+        </tr>
+    </table>
+    <h2 id="res"></h2>
+</body>
+</htm

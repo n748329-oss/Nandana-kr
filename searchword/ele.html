@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mod">
+        <h2>search word or element</h2>
+        <label class="11" for="">Enter sentence:</label>
+        <input type="text" id="num"><br><br>
+        <label class="11" for="">search:</label>
+        <textarea name="" id="txt"></textarea><br><br>
+        <button class="im" onclick="wordf()">click here</button>
+        <h3 id="res" style="text-align: center;"></h3>   
+    </div>
+    <script>
+        function wordf(){
+            let set=document.getElementById("num").value
+            let data=document.getElementById("txt").value
+            let position=""
+            position=set.search(data);
+            console.log("cghj",position)
+            if(position>-1)
+        {
+            document.getElementById("res").innerHTML="yes"
+
+        }else{
+            document.getElementById("res").innerHTML="no"
+        }
+        }
+    </script>
+</body>
+</html>

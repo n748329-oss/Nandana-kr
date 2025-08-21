@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter the number:<input type="text" id="num">
+    <button onclick="evenod()"> find</button>
+    <table>
+
+        <tr>
+            <th>even</th>
+            <th>odd</th>
+        </tr>
+        <tr>
+            <td id="ev"></td>
+            <td id="od"></td>
+        </tr>
+         <script>
+            function evenod(){
+            let even="";
+            let odd="";
+            let n =parseInt(document.getElementById("num").value)
+
+            for(let i=1;i <=n;i++){
+                if (i%2 == 0) {
+                    even = even.concat(i + "<br>")
+
+
+                }
+                else{
+                    odd = odd.concat(i + "<br>")
+                }
+            }
+            document.getElementById("ev").innerHTML = even
+            document.getElementById("od"). innerHTML = odd
+
+
+            }
+
+         </script>
+    </table>
+</body>
+</html>

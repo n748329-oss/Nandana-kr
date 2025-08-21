@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>fruit data</h2>
+        <div id="res"></div>
+        <div>
+            <label for="">ID</label>
+            <input type="text" id="id">
+            <label for="">fruit</label>
+            <input type="text" id="fruit">
+            <label for="">size</label>
+            <input type="text" id="size">
+            <label for="">color</label>
+            <input type="text" id="color">
+            <button onclick="add()"> Add data</button>
+        </div>
+    </div>
+    <script>
+        let ndata = [{
+            id: 1,
+            fruit: "apple",
+            size: "large",
+            color: "red",
+
+
+        },
+        {
+            id: 2,
+            fruit: "orange",
+            size: "small",
+            color: "orange",
+        },
+        {
+            id: 3,
+            fruit: "pineapple",
+            size: "large",
+            color: "yellow",
+        }
+        ]
+
+        function displayed() {
+            let result = document.getElementById("res")
+            result.innerHTML = ""
+            for (let i = 0; i < ndata.length; i++) {
+                let fdft = ndata[i]
+                result.innerHTML += `<div>ID:${fdft.id}fruit:${fdft.fruit} color:${fdft.color} size:${fdft.color}
+                    <button onclick="edit(${i})">EDIT</button>
+                    <button onclick="delet(${i})">DELETE</button></div>`
+            }
+        }
+        function add() {
+            let id = document.getElementById("id").value
+            let fruit = document.getElementById("fruit").value
+            let size = document.getElementById("size").value
+            let color = document.getElementById("color").vlue
+            ndata.push({ "id": id, "fruit": fruit, "size": size, "color": color })
+            displayed()
+        }
+    displayed()
+
+    function delet(index){
+        ndata.splice(index,1)
+        displayed()
+    }
+
+    function edit(index){
+        let editd=ndata[index]
+        document.getElementById("id").value=editd.id
+        document.getElementById("fruit").value=editd.fruit
+        document.getElementById("size").value=editd.size
+        document.getElementById("color").value=editd.color
+    }
+
+    displayed()
+
+
+
+    </script>
+</body>
+
+</html>

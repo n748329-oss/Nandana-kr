@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="res"></h1>
+    <script>
+        let a=5;
+        let b=10;
+        console.log(a+b)
+        document.write(a+b)
+        document.getElementById("res").innerHTML=`the sum of ${a} and ${b} is=${a+b}`;
+        document.getElementById("res").style.color="red";
+        let status=a>b ? "a is greater tha b" :" b is greater than a";
+        console.log(status)
+
+        let message ="     hello world"
+        document.write(message.length +"<br>");
+        console.log(message.toUpperCase());
+        console.log(message.trim());
+
+        if(a>3){
+            document.write("a is greater than 3");
+        }
+        let age=18;
+         if(age>=17){
+            document.write("you are eligible to vote <br>");
+        }
+        else{
+
+            document.write(" you are not eligible to vote <br>")
+        }
+
+        let marks=75;
+        if(marks>=90){
+            document.write("you got A+ <br>" )
+        }
+        else if(marks>=80 && marks<=90){
+            document.write(" you got A")
+        }
+        else if(marks>=70 && marks<=80){
+            document.write("you got B+ <br>")
+        }
+        else if(marks>=60 && marks<=70){
+            document.write("you got B")
+        }
+        else if(marks>=50 && marks<=60){
+            document.write(" you got C+")
+        }
+        else{
+            document.write("you are failed ")
+        }
+
+        let day="monday";
+        switch(day){
+            case "monday":
+            document.write("today is monday");
+            break;
+            case "tuesday":
+                document.write("today is tuesday");
+                break;
+            case "wednesday":
+                document.write("today is wednesday");
+                 break;
+            case"thursday":
+               document.write("today is thursday");
+               break;
+            case"friday":
+            document.write("today is friday");
+           break;
+           case "saturday":
+            document.write("today is saturday");
+            break;
+            default:
+                document.write("Invalid day");
+        
+        }
+        let result =(marks >=40)? "pass" : "fail";
+        document.write("<br> your result is:"+result);
+
+
+
+
+    </script>
+</body>
+</html>

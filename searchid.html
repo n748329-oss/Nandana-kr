@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruitdata=[{
+            id:1,
+            fruit:"apple",
+            color:"red",
+            size:"small",
+        },
+
+        {
+            id: 2,
+            fruit:"orange",
+            color:"orange",
+            size:"large",
+            
+        },
+        {
+            id:3,
+            fruit:"grape",
+            color:"grape",
+            size:"small",
+
+        }]
+
+
+        for(let i=0;i<fruitdata.length;i++){
+            let id=fruitdata[i].id
+            let fruit=fruitdata[i].fruit 
+            let color=fruitdata[i].color
+            let size=fruitdata[i].size
+            document.write(`ID:${id} fruit:${fruit} color:${color} size:${size}<br><br>`)    
+        
+        }
+        function search(){
+            let searchv=document.getElementById("num").value 
+            let res=""
+            let fdft=fruitdata.filter(ft=>ft.id==searchv||ft.fruit.toLowerCase()===searchv.toLowerCase()||ft.color.toLowerCase()===searchv.toLowerCase ()||ft.size.toLowerCase()===searchv.toLowerCase ())
+            if(fdft.length>0){
+                for(let i=0;i<fdft.length;i++)
+            {
+                res=res+`ID:${fdft[i].id} fruit:${fdft[i].fruit} color:${fdft[i].color} size:${fdft[i].size}<br><br>`
+            }
+            document.getElementById("result").innerHTML=res
+            }else{
+                document.getElementById("result").innerHTML="not found"
+
+            }
+        }
+        
+        </script>
+        <input type="text" placeholder="Enter anything" id="num">
+        <button onclick="search()">click here</button>
+        <h3 id="result"></h3>
+</body>
+</html>

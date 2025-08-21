@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     Number 1= <input type="number" id="num1"><br><br>
+     number 2=<input type="number" id="num2"><br><br>
+     <button onclick="add()"> click here</button><br>
+      <button onclick="sub()"> click here</button><br>
+       <button onclick="mul()"> click here</button><br>
+        <button onclick="div()"> click here</button><br>
+     
+
+    <p id="res"></p>
+
+   <script>
+    function add(){
+        let num1=document.getElementById("num1").value;
+        let num2=document.getElementById("num2").value;
+        let sum=parseInt(num1)+parseInt(num2);
+        document.getElementById("res").innerText=`${sum}`;
+
+
+
+    }
+    function sub(){
+        let num1=document.getElementById("num1").value;
+        let num2=document.getElementById("num2").value;
+        let sum=parseInt(num1)-parseInt(num2);
+        document.getElementById("res").innerText=`${sum}`;
+
+
+
+    }
+    function mul(){
+        let num1=document.getElementById("num1").value;
+        let num2=document.getElementById("num2").value;
+        let sum=parseInt(num1)*parseInt(num2);
+        document.getElementById("res").innerText=`${sum}`;
+
+
+
+    }
+      function div(){
+        let num1=document.getElementById("num1").value;
+        let num2=document.getElementById("num2").value;
+        let sum=parseInt(num1)/parseInt(num2);
+        document.getElementById("res").innerText=`${sum}`;
+
+
+
+    }
+
+
+   </script>
+</body>
+</html>

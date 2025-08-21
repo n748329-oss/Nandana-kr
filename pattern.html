@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter the number:<input type="text" id="pattern">
+    <button onclick="ipattern()"> ipattern</button>
+    <button onclick="jpattern()"> jpattern</button>
+    <button onclick="pattern()"> *pattern</button>
+    <button onclick="spattern()"> spattern</button>
+    <button onclick="fpattern()"> fpattern</button>
+    <p id="res"></p>
+
+    <script>
+         function ipattern(){
+        let n = parseInt(document.getElementById("pattern").value)
+        let pattern=""
+
+        for(let i=1;i<=n;i++){
+            for(j=0;j<i;j++){
+                pattern += `${i}`
+            }
+            pattern=pattern+"<br>"
+
+
+        }
+        document.getElementById("res").innerHTML=pattern
+
+
+         }
+
+          function jpattern(){
+        let n = parseInt(document.getElementById("pattern").value)
+        let pattern=""
+
+        for(let i=1;i<=n;i++){
+            for(j=0;j<i;j++){
+                pattern += `${j}`
+            }
+            pattern=pattern+"<br>"
+
+
+        }
+        document.getElementById("res").innerHTML=pattern
+    }
+    function pattern(){
+        let n = parseInt(document.getElementById("pattern").value)
+        let pattern=""
+
+        for(let i=1;i<=n;i++){
+            for(j=0;j<i;j++){
+                pattern += "*"
+            }
+            pattern=pattern+"<br>"
+
+
+        }
+        document.getElementById("res").innerHTML=pattern
+    }
+         function spattern(){
+        let n = parseInt(document.getElementById("pattern").value)
+        let pattern=""
+
+        for(let i=1;i<=n;i++){
+            for(j=0;j<=n;j++){
+                pattern += "*"
+            }
+            pattern=pattern+"<br>"
+
+
+        }
+        document.getElementById("res").innerHTML=pattern
+
+
+         }
+
+          function fpattern(){
+        let n = parseInt(document.getElementById("pattern").value)
+        let pattern=""
+
+        for(let i=1;i<=n;i++){
+            for(j=1;j<=n;j++){
+                if( i==1|| i==n || j==1|| j==n){ 
+                pattern += "*"
+            }
+            else{
+                 pattern+="&nbsp;&nbsp;"
+            }
+        }
+            pattern=pattern+"<br>"
+        }
+        document.getElementById("res").innerHTML=pattern
+
+
+         }
+
+
+
+
+
+    </script>
+</body>
+</html>

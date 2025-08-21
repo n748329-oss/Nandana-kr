@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script>
+        let fruits = ['apple','banana','orange']
+        let number = [1,2,3,4,5] ;
+
+        
+        
+        document.write(number.length);//<br>
+        
+
+        let newnumber = number.slice(1, 3)
+
+         document.write('<br>',newnumber); 
+         //output:[2,3]
+
+        let newarray =fruits.slice(1, 2)
+        document.write("new" , '<br>',newarray);
+
+         document.write( '<br>',fruits[0]);//output:'apple'
+
+        fruits.push( '<br>','grape');
+        // fruits:['apple','banana','orange','grape']
+
+        let lastfruit = fruits.pop();
+        // lastfruit:'grape','fruits:['apple','banana','orange']
+        fruits.unshift( '<br>','kiwi');
+        //fruits :['kiwi','apple','banana','orange']
+
+        let firstfruit =fruits.shift();
+        //firstfruit :'kiwi',fruits: ['apple','banana','orange']
+
+        let bananaIndex =fruits.indexOf( '<br>','banana');
+        //bananaIndex:1
+
+        document.write( '<br>',"Arry fruit",fruits);
+
+        fruits.splice(0,3,'mango','kiwi');
+         document.write( '<br>',"spliceeg",fruits);
+        fruits.splice(1,1);
+
+        // fruits: ['apple','orange']
+
+        let slicedfruits = fruits.slice(1,2);
+        //slicedfruits :['orange'],fruits:['apple','orange']
+
+        document.write( '<br>',"SLICE",slicedfruits);
+
+        let morefruits = ['grape','watermelon'];
+        let combinedfruits = fruits.concat(morefruits);
+        // combinedfruits:['apple','orange','watermelon']
+
+        let filteredfruits = fruits.filter(fruit => fruit !=='apple');
+        //filteredfruits:['orange']
+
+        let array = [8,9,3,2,5,12]
+
+        let x =array.reduce(function(accumulator,currentvalue)  {
+            return accumulator+currentvalue;
+        },0);
+        
+         document.write( '<br>',"hii",x+"<br>");
+        //output:39
+       //document.write(fruits)
+        let hasapple =fruits.includes('apple');
+        document.write(hasapple+"<br>") 
+        // hasaaple:true
+        document.write("fruits array",fruits)
+        fruits.sort();
+        document.write("sss",fruits ,'<br>')
+        
+        //fruits: ['apple','orange']
+
+
+        let fruitData =[
+            {
+                id:1,
+                fruit:"orange",
+                size:"medium",
+                color:"orange",
+
+            },
+            {
+                 id:2,
+                fruit:"apple",
+                size:"medium",
+                color:"red",
+
+            },
+            {
+                 id:3,
+                fruit:"mango",
+                size:"medium",
+                color:"yellow",
+            }
+        ]
+        const foundfruit = fruitData.find(fruit => fruit.id==2  );
+        console.log("found",foundfruit);
+
+        let foundfruitData = fruitData.find(fruits =>  fruits.fruit!=="apple");
+        // document.write(fruit);
+        console.log("fruitdata",foundfruitData);
+
+
+        let fruit = fruits.find(frt => frt ==="aapple")
+        console.log(fruit);
+
+
+        let frt =[
+            { id: 1,fruit: "apple",price: 20},
+            {id: 2, fruit: "orange", price: 50},
+            {id:3, fruit: "mango", price: 40},
+
+        ]
+
+        let fruit1 = frt.find(frt => frt.id ===2)
+       console.log(fruit1);
+
+        frt.forEach((ft)=>{
+            console.log(ft.fruit);
+            console.log(ft.price);
+            
+            })
+
+            frt.map((gj)=>{
+                console.log(gj.fruit);
+                
+            })
+            fruits.forEach((fruit) =>{
+                console.log(fruit);
+            });
+            fruits.forEach(function(fruit){
+            console.log(fruit);
+            
+            })
+
+            let uppercaseFruits = fruits.map(fruit =>fruit.toUpperCase());
+            console.log("uppercasefruit",uppercaseFruits);
+
+            uppercaseFruits:['apple','orange']
+
+            const frtData = ["apple","banana","apple"]
+            const fruit2 =[...new Set(frtData)];
+
+            console.log(fruit2);
+
+            let arr =[4,8,3,1,19,10,5,2]
+            console.log("rev",arr.reverse());
+
+            let cars=["suzuki","innova","benz","porsche","bmw"]
+            console.log("cars",cars.sort());
+
+            let arr2 = arr.sort()
+            console.log(arr2);
+            
+            let sortedArrAsc = arr.sort((a,b) => a-b);
+            console.log(sortedArrAsc);
+
+            let sortedArrDsc = arr.sort((a,b) => b-a);
+            console.log(sortedArrDsc);
+
+            [a,b]=[10,20]
+            console.log(`a: ${a},b: ${b}`)
+            
+            
+            
+     </script>
+</body>
+</html>
